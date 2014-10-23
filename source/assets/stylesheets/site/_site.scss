@@ -12,6 +12,7 @@
   position: relative;
 	@include clearfix;
 	background-color: $medium-purple;
+  border-bottom: 1px solid  $dark-purple;
 }
 
 .site-main {
