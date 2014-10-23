@@ -65,9 +65,8 @@ h4, h5, h6 {
 		padding: 2em 0;
 		float: left;
 		line-height: 0;
-
-       padding-top: 0px;
-padding-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 
     @include media($medium-screen) {
 		}
@@ -101,8 +100,8 @@ padding-bottom: 0px;
 				display: block;
 				float: left;
 				line-height: 0;
-        font-weight: bold;
-        color: #444;
+				font-weight: bold;
+				color: $dark-purple;
 
         // I removed the top and bottom padding of the header
         // and fattened up the touch targets on these links.
@@ -110,7 +109,7 @@ padding-bottom: 0px;
 				padding: 1.5em;
 
         &:hover {
-          background: #002B36;
+          background: $dark-purple;
           color: #EFE8D5;
         }
 			}
@@ -220,7 +219,7 @@ padding-bottom: 0px;
     }
   }
   a {
-  	color: $blue;
+  	color: $white-smoke;
   }
 
   li {
