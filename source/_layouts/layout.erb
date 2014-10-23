@@ -17,9 +17,9 @@
   <body class="<%= page_classes %>">
 
     <header class="site-header">
-      <div class="container">
+      
         <%= partial "_layouts/nav" %>
-      </div>
+    
     </header>
 
     <main class="site-main">
@@ -29,9 +29,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <%= Time.now.year %> <a href="https://github.com/dnajd/middleman-loaded">middleman-loaded</a></p>
-      </div>
+      <%= partial "_layouts/footer" %>
     </footer>
 
     <%= javascript_include_tag  "application" %>
