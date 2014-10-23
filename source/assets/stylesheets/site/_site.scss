@@ -15,13 +15,7 @@
   border-bottom: 1px solid  $dark-purple;
 }
 
-.site-main {
-  @include section_padding(.5em);
 
-  @include media($medium-screen) {
-    @include section_padding(5em);
-  }
-}
 .main-section {
   @include outer-container;
   aside {
