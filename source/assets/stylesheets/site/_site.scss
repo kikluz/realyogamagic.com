@@ -191,7 +191,7 @@ h4, h5, h6 {
 
 .footer {
   $footer-background: desaturate(darken($medium-purple, 0), 4);
-  $footer-color: $white-smoke;
+  $footer-color: $dark-purple;
   $footer-link-color: transparentize($footer-color, .2);
   $footer-disclaimer-color: transparentize($footer-color, .5);
 
@@ -231,7 +231,7 @@ h4, h5, h6 {
     }
   }
   a {
-  	color: $white-smoke;
+  	color: $dark-purple;
   }
 
   li {
