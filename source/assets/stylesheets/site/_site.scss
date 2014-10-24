@@ -200,14 +200,14 @@ h4, h5, h6 {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(239,232,213,.95);
+    background: rgba(255,204,204,.90);
     box-shadow: 0 10px 10px rgba(0,43,54,.4);
 
 		a {
 			display: block;
 			margin: 2em 0;
 			text-align: center;
-      color: #002B36;
+      color: $dark-purple;
 		}
 	}
 }
