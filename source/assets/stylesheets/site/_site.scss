@@ -1,7 +1,9 @@
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
-
+h2 {
+  color: $medium-purple;
+}
 // A simple, reusable mixin for applying
 // to the top and bottom of an element.
 @mixin section_padding($padding: 1em) {
@@ -18,6 +20,9 @@
 // ------------------------------------------------------------
 // sections 
 // ------------------------------------------------------------
+.container {
+  margin-bottom: 15px;
+}
 .main-section {
   margin-bottom: 40px;
   @include outer-container;
@@ -44,14 +49,11 @@
   @include outer-container;
   aside {
     img {
-    margin-top: 35px;
+    margin-top: 30px;
     height: auto;
+    margin-left: auto;
     margin-right: auto;
     display: block;
-    @include media($medium-screen) {
-      margin-left: auto;
-
-    }
     }
     @include media($medium-screen) {
    @include span-columns(4); 
@@ -313,4 +315,12 @@ h4, h5, h6 {
     max-width: 35em;
     text-align: center;
   }
+}
+
+
+// ------------------------------------------------------------
+//Contact Page
+// ------------------------------------------------------------
+.info a {
+  color: $dark-purple;
 }
