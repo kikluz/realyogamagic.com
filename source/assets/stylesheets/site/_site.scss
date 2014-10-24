@@ -94,6 +94,9 @@ h4, h5, h6 {
 		padding-bottom: 0px;
     img {
       padding:5px;
+      @include media($medium-screen) {
+      padding-top: 0;
+    }
     }
 
 
@@ -104,9 +107,10 @@ h4, h5, h6 {
 	}
 	h1 {
     color: $dark-purple;
-    font-size: 1.2em;
+    font-size: 2em;
+    margin-top: 12px;
 		@include media($medium-screen) {
-		font-size: 4em;
+		font-size: 3.7em;
 		margin-top: 20px;
 	}
 
@@ -123,13 +127,13 @@ h4, h5, h6 {
 		overflow: hidden;
 		float: right;
 
-		@include media($medium-screen) {
+		@include media($large-screen) {
 			height: auto;
 		}
 
 		a {
 			@include trailing-hovers;
-			@include media($medium-screen) {
+			@include media($large-screen) {
 				display: block;
 				float: left;
 				line-height: 0;
@@ -149,7 +153,7 @@ h4, h5, h6 {
 		}
 
 		.nav-right {
-			@include media($medium-screen) {
+			@include media($large-screen) {
 				float: right;
 			}
 		}
@@ -166,7 +170,7 @@ h4, h5, h6 {
 	right: 1.5em;
 	z-index: 2;
 
-	@include media($medium-screen) {
+	@include media($large-screen) {
 		display: none;
 	}
 
