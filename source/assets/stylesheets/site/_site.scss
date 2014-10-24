@@ -15,8 +15,11 @@
   border-bottom: 1px solid  $dark-purple;
 }
 
-
+// ------------------------------------------------------------
+// sections 
+// ------------------------------------------------------------
 .main-section {
+  margin-bottom: 40px;
   @include outer-container;
   aside {
   	img {
@@ -33,6 +36,30 @@
   article {
   @include media($medium-screen) { 
   	@include span-columns(8); 
+  }
+  }
+}
+
+.about-section {
+  @include outer-container;
+  aside {
+    img {
+    margin-top: 35px;
+    height: auto;
+    margin-right: auto;
+    display: block;
+    @include media($medium-screen) {
+      margin-left: auto;
+
+    }
+    }
+    @include media($medium-screen) {
+   @include span-columns(4); 
+}
+}
+  article {
+  @include media($medium-screen) { 
+    @include span-columns(8); 
   }
   }
 }
@@ -63,18 +90,12 @@ h4, h5, h6 {
 		padding-top: 0px;
 		padding-bottom: 0px;
 
+
     @include media($medium-screen) {
-      margin-top: 18px;
+      margin-top: 23px;
       margin-left: 20px;
 
 		}
-
-    i {
-      font-size: 3em;
-      line-height: 0;
-      display: block;
-      color: #002B36;
-    }
 	}
 	h1 {
     color: $dark-purple;
@@ -179,6 +200,14 @@ h4, h5, h6 {
 		}
 	}
 }
+
+
+#gallery img {
+  float: left;
+  width: 50%;
+  padding: 3% 3% 3% 0;
+}
+
 
 // ------------------------------------------------------------
 // footer
