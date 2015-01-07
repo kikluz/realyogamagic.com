@@ -67,13 +67,18 @@ header {
 // ------------------------------------------------------------
 // sections
 // ------------------------------------------------------------
-.container {
-  background-color: rgba(#000, 0.3);
 
+.container {
+
+  background-color: rgba(#fff, 0.3);
 
   @include media($medium-screen) {
     padding:30px 80px;
   }
+}
+
+body.index .container {
+  background-color: rgba(#000, 0.3);
 }
 .main-section {
   margin-bottom: 40px;
