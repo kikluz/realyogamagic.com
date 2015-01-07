@@ -43,6 +43,7 @@ header {
 
     @include media($medium-screen + 30) {
       margin-top:30px;
+      padding-top:40px;
     }
   }
 
@@ -60,6 +61,7 @@ header {
     }
   }
 }
+
 
 // ------------------------------------------------------------
 // sections
