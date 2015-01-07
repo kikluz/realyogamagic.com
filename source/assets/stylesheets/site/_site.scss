@@ -22,7 +22,7 @@ html {
 }
 
 .title {
-    font-size:2em;
+    font-size:1.4em;
     font-weight:normal;
   }
 
@@ -35,11 +35,11 @@ html {
   padding: $padding 0;
 }
 
-.site-header {
+header {
   @include clearfix;
   .container{
     padding-top:0;
-    padding-bottom:0;
+    padding-bottom:2em;
 
     @include media($medium-screen + 30) {
       margin-top:30px;
@@ -47,9 +47,9 @@ html {
   }
 
   a.title {
-    padding: .6em 0;
+    padding: .5em 0;
     display:inline-block;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight:bold;
     font-family: Georgia,"Times New Roman",Times,serif;
 
@@ -278,7 +278,9 @@ h4, h5, h6 {
 // ------------------------------------------------------------
 
 .footer {
-
+  border-top:1px solid #fff;
+  margin-top:2em;
+  padding-top:2em;
 }
 
 
