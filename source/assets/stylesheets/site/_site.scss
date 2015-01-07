@@ -1,12 +1,24 @@
 
 html {
-  background: url(/assets/images/cover3.jpg) no-repeat center center fixed;
+
+  background: url(/assets/images/cover.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width:100%;
   height:100%;
+
+
+  @include media($large-screen) {
+    background: url(/assets/images/cover3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:100%;
+    height:100%;
+  }
 }
 
 
@@ -49,7 +61,7 @@ h2 {
 }
 
 // ------------------------------------------------------------
-// sections 
+// sections
 // ------------------------------------------------------------
 .container {
   background-color: rgba(#000, 0.3);
@@ -67,12 +79,12 @@ h2 {
   		display: block;
   	}
   	@include media($medium-screen) {
-      @include span-columns(4); 
+      @include span-columns(4);
     }
   }
   article {
-    @include media($medium-screen) { 
-    	@include span-columns(8); 
+    @include media($medium-screen) {
+    	@include span-columns(8);
     }
   }
 }
@@ -88,12 +100,12 @@ h2 {
     display: block;
     }
     @include media($medium-screen) {
-   @include span-columns(4); 
+   @include span-columns(4);
 }
 }
   article {
-  @include media($medium-screen) { 
-    @include span-columns(8); 
+  @include media($medium-screen) {
+    @include span-columns(8);
   }
   }
 }
@@ -203,7 +215,7 @@ h4, h5, h6 {
     font-size: 2em;
     line-height: 0;
     display: block;
-    
+
   }
 
   .icon {
@@ -267,7 +279,7 @@ h4, h5, h6 {
 
   padding: $base-line-height*2 $gutter;
   width: 100%;
- 
+
 
   .footer-logo {
     text-align: center;
@@ -279,7 +291,7 @@ h4, h5, h6 {
     img {
       height: 3em;
     }
-  } 
+  }
 
   .footer-links {
     @include clearfix;
@@ -324,7 +336,7 @@ h4, h5, h6 {
     font-size: 1em;
     font-weight: 800;
     margin-bottom: .4em;
-  }  
+  }
 
   hr {
     border: 1px solid transparentize($footer-disclaimer-color, .3);
