@@ -1,3 +1,16 @@
+
+html {
+  background: url(/assets/images/cover3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  height:100%;
+}
+
+
+
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
@@ -11,37 +24,56 @@ h2 {
 }
 
 .site-header {
-  position: relative;
-	@include clearfix;
-	background-color: $medium-purple;
-  border-bottom: 1px solid  $dark-purple;
+  @include clearfix;
+  .container{
+    padding-top:0;
+    padding-bottom:0;
+
+    @include media($medium-screen + 30) {
+      margin-top:30px;
+    }
+  }
+
+  a.title {
+    padding: .6em 0;
+    display:inline-block;
+    font-size: 1.4em;
+    font-family: Georgia,"Times New Roman",Times,serif;
+
+    color: $base-font-color;
+    @include media($medium-screen) {
+      font-family: Georgia,"Times New Roman",Times,serif;
+      font-size: 2.3em;
+    }
+  }
 }
 
 // ------------------------------------------------------------
 // sections 
 // ------------------------------------------------------------
 .container {
-  margin-bottom: 15px;
+  background-color: rgba(#000, 0.3);
+  padding:30px 80px;
 }
 .main-section {
   margin-bottom: 40px;
   @include outer-container;
   aside {
   	img {
-		margin-top: 30px;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
+  		margin-top: 30px;
+  		height: auto;
+  		margin-left: auto;
+  		margin-right: auto;
+  		display: block;
   	}
   	@include media($medium-screen) {
-   @include span-columns(4); 
-}
-}
-  article {
-  @include media($medium-screen) { 
-  	@include span-columns(8); 
+      @include span-columns(4); 
+    }
   }
+  article {
+    @include media($medium-screen) { 
+    	@include span-columns(8); 
+    }
   }
 }
 
@@ -84,134 +116,129 @@ h4, h5, h6 {
 // ------------------------------------------------------------
 
 .site-nav {
-	@include clearfix;
+  @include clearfix;
 
-	.navbar-brand {
-		display: block;
-		line-height: 0;
-		padding: 2em 0;
-		float: left;
-		line-height: 0;
-		padding-top: 0px;
-		padding-bottom: 0px;
-    img {
-      padding:5px;
-      @include media($medium-screen) {
-      padding-top: 0;
-    }
-    }
-
+  .navbar-brand {
+    display: block;
+    line-height: 0;
+    padding: 2em 0;
+    float: left;
+    line-height: 0;
+    color: $base-font-color;
 
     @include media($medium-screen) {
-      margin-top: 23px;
-      margin-left: 20px;
-		}
-	}
-	h1 {
-    color: $dark-purple;
-    font-size: 1.4em;
-    margin-top: 18px;
-		@include media($medium-screen) {
-		font-size: 3.7em;
-		margin-top: 20px;
-	}
+      padding: 2em;
+    }
 
-	}
+    i {
+      font-size: 3em;
+      line-height: 0;
+      display: block;
+    }
+  }
 
-	.site-logo {
-		display: block;
-		border-radius: 100%;
-		margin: auto;
-	}
+  .site-logo {
+    display: block;
+    border-radius: 100%;
+    margin: auto;
+  }
 
-	.nav-links {
-		height: 0;
-		overflow: hidden;
-		float: right;
+  .nav-links {
+    height: 0;
+    overflow: hidden;
+    max-width:460px;
+    display:inline-block;
+    float:right;
+    padding-top: .7em;
 
-		@include media($large-screen) {
-			height: auto;
-		}
+    @include media($large-screen) {
+      height: auto;
+    }
 
-		a {
-			@include trailing-hovers;
-			@include media($large-screen) {
-				display: block;
-				float: left;
-				line-height: 0;
-				font-weight: bold;
-				color: $dark-purple;
+    a {
+      @include trailing-hovers;
+      @include media($large-screen) {
+        display: block;
+        float: left;
+        line-height: 0;
+        font-weight: bold;
+        color: $base-font-color;
 
         // I removed the top and bottom padding of the header
         // and fattened up the touch targets on these links.
         // Now they're easier to click.
-				padding: 1.5em;
+        padding: 1.5em;
 
         &:hover {
-          background: $dark-purple;
-          color: #EFE8D5;
+         // color: #EFE8D5;
         }
-			}
-		}
+      }
+    }
 
-		.nav-right {
-			@include media($large-screen) {
-				float: right;
-			}
-		}
-	}
+    .nav-right {
+      @include media($medium-screen) {
+        float: right;
+      }
+    }
+  }
 }
+
 
 // ------------------------------------------------------------
 // Mobile Menu
 // ------------------------------------------------------------
 
 .mobile-menu {
-	position: absolute;
-	top: 2em;
-	right: 1.5em;
-	z-index: 2;
+  position: absolute;
+  top: 2em;
+  right: 1.5em;
+  z-index: 2;
 
-	@include media($large-screen) {
-		display: none;
-	}
+  @include media($large-screen) {
+    display: none;
+  }
 
   i {
+    margin-top:-4px;
     font-size: 2em;
     line-height: 0;
     display: block;
-    color: #002B36;
+    
   }
 
-	.icon {
-		display: block;
-		font-size: 2em;
-		cursor: pointer;
-	}
+  .icon {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+  }
 }
 
 // Menu active
 .menu-active {
 
-	.nav-links {
-		height: auto;
-		overflow: auto;
+  .nav-links {
+    height: auto;
+    overflow: auto;
     position: absolute;
-    top: 100%;
+    top: 0px;
     left: 0;
     right: 0;
-    background: rgba(255,204,204,.90);
-    box-shadow: 0 10px 10px rgba(0,43,54,.4);
+    background-color: #EFE8D5;
+    box-shadow: 0 10px 10px rgba(0,43,54,.2);
 
-		a {
-			display: block;
-			margin: 2em 0;
-			text-align: center;
-      color: $dark-purple;
-		}
-	}
+    a {
+      display: block;
+      margin: 2em 0;
+      text-align: center;
+      color: #002B36;
+    }
+  }
 }
 
+
+// ------------------------------------------------------------
+// gallery
+// ------------------------------------------------------------
 
 #gallery img {
   float: left;
@@ -221,11 +248,11 @@ h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   display: block;
-    @include media($large-screen) {
+  @include media($large-screen) {
       float: left;
       width: 50%;
       padding: 3% 3% 3% 0;
-}
+  }
 }
 
 
@@ -234,12 +261,10 @@ h4, h5, h6 {
 // ------------------------------------------------------------
 
 .footer {
-  $footer-background: desaturate(darken($medium-purple, 0), 4);
   $footer-color: $dark-purple;
   $footer-link-color: transparentize($footer-color, .2);
   $footer-disclaimer-color: transparentize($footer-color, .5);
 
-  background: $footer-background;
   padding: $base-line-height*2 $gutter;
   width: 100%;
  
