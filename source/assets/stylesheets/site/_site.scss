@@ -26,9 +26,6 @@ html {
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
-h2 {
-  color: $medium-purple;
-}
 // A simple, reusable mixin for applying
 // to the top and bottom of an element.
 @mixin section_padding($padding: 1em) {
@@ -273,85 +270,7 @@ h4, h5, h6 {
 // ------------------------------------------------------------
 
 .footer {
-  $footer-color: $dark-purple;
-  $footer-link-color: transparentize($footer-color, .2);
-  $footer-disclaimer-color: transparentize($footer-color, .5);
 
-  padding: $base-line-height*2 $gutter;
-  width: 100%;
-
-
-  .footer-logo {
-    text-align: center;
-    margin-bottom: 2em;
-    i {
-    	color: $white-smoke;
-    }
-
-    img {
-      height: 3em;
-    }
-  }
-
-  .footer-links {
-    @include clearfix;
-    margin-bottom: $base-line-height;
-
-    @include media($medium-screen) {
-      @include shift(3);
-    }
-  }
-
-  ul {
-    margin-bottom: $base-line-height*2;
-
-    @include media($medium-screen) {
-      @include span-columns(3);
-      @include omega(3n);
-      @include clearfix;
-    }
-  }
-  a {
-  	color: $dark-purple;
-  }
-
-  li {
-    text-align: center;
-
-    @include media($medium-screen) {
-      text-align: left;
-    }
-  }
-
-  li a {
-    color: $footer-link-color;
-
-    &:hover {
-      color: transparentize($footer-color, 0);
-    }
-  }
-
-  li h3 {
-    color: $footer-color;
-    font-size: 1em;
-    font-weight: 800;
-    margin-bottom: .4em;
-  }
-
-  hr {
-    border: 1px solid transparentize($footer-disclaimer-color, .3);
-    margin: 0 auto $base-line-height;
-    width: 12em;
-  }
-
-  p {
-    color: $footer-disclaimer-color;
-    font-size: .9em;
-    line-height: 1.5em;
-    margin: auto;
-    max-width: 35em;
-    text-align: center;
-  }
 }
 
 
