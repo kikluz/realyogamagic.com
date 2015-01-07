@@ -12,14 +12,6 @@ activate :directory_indexes
 activate :automatic_image_sizes
 activate :syntax # code highlighting
 
-# github userpages deploy
-#activate :deploy do |deploy|
-#  deploy.method = :git
-#  deploy.build_before = true
-#  deploy.branch   = "master"
-#  deploy.remote   = "git@github.com:KZaM/KZaM.github.io.git"
-#end
-
 # github project pages deploy
 activate :deploy do |deploy|
   deploy.method = :git
